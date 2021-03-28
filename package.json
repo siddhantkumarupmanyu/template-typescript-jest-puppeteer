@@ -13,8 +13,9 @@
     "puppeteer": "^8.0.0"
   },
   "scripts": {
-    "clean": "rm -rf build && mkdir -p build/src  build/test/end_test",
+    "clean": "rm -rf build && mkdir -p build/src build/test/unit build/test/end_test",
     "build:src": "tsc --project tsconfig.src.json",
+    "build:unit": "tsc --project tsconfig.unit-test.json",
     "build:end-test": "tsc --project tsconfig.end-test.json",
     "test:end": "yarn clean && yarn build:src && yarn build:end-test && yarn jest --config=end-test.jest.config.js"
   }
