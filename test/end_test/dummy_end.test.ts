@@ -1,4 +1,4 @@
-beforeAll(async () => {
+/* beforeAll(async () => {
   await page.goto("file:///home/siddhant/JSProjects/learningJest/with-puppeteer-typescript/test.html", { waitUntil: 'domcontentloaded' });
 });
 
@@ -17,4 +17,4 @@ describe('Test Document', () => {
   it('should be titled "Google"', async () => {
     await expect(page.title()).resolves.toMatch('Test Document');
   });
-});
+}); */
