@@ -17,6 +17,9 @@
     "build:src": "tsc --project tsconfig.src.json",
     "build:unit": "tsc --project tsconfig.unit-test.json",
     "build:end-test": "tsc --project tsconfig.end-test.json",
-    "test:end": "yarn clean && yarn build:src && yarn build:end-test && yarn jest --config=end-test.jest.config.js"
+    "test:unit": "yarn clean && yarn build:unit && jest --config=unit-test.jest.config.js",
+    "test:end": "yarn clean && yarn build:src && yarn build:end-test && yarn jest --config=end-test.jest.config.js",
+    "test": "yarn test:unit",
+    "end": "yarn test:end"
   }
 }
