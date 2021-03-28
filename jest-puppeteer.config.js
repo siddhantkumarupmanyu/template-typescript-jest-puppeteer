@@ -5,7 +5,7 @@ module.exports = {
         devtools: false
     },
     server: {
-        command: 'node server.js',
-        port: 4444,
+        command: 'yarn http-server build/src -a localhost -p 3030',
+        port: 3030,
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "with-puppeteer",
+  "name": "typescript-jest-puppeteer-unittest-template",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "puppeteer": "^8.0.0"
   },
   "scripts": {
+    "backup": "mkdir -p build/src && cp resources-backup/* build/src/",
     "clean:src": "rm -f build/src/*.js",
     "clean:unit": "rm -rf build/test/unit && mkdir -p build/test/unit",
     "clean:end": "rm -rf build/test/end_test && mkdir -p build/test/end_test",
@@ -22,12 +23,12 @@
     "clean": "yarn clean:src && yarn clean:unit && yarn clean:end",
     "build:src": "tsc --project tsconfig.src.json",
     "build:unit": "tsc --project tsconfig.unit-test.json",
-    "build:end-test": "tsc --project tsconfig.end-test.json",
+    "build:end": "tsc --project tsconfig.end-test.json",
     "run:unit": "yarn jest --config=unit-test.jest.config.js",
     "run:end": "yarn jest --config=end-test.jest.config.js",
     "run:server": "yarn http-server build/src -a localhost -p 3030",
     "test:unit": "yarn clean:src-unit && yarn build:unit && yarn run:unit",
-    "test:end": "yarn clean:src-end && yarn build:src && yarn build:end-test && yarn run:end",
+    "test:end": "yarn clean:src-end && yarn build:src && yarn build:end && yarn run:end",
     "test": "yarn test:unit",
     "end": "yarn test:end"
   }

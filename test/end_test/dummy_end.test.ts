@@ -1,5 +1,5 @@
-/* beforeAll(async () => {
-  await page.goto("file:///home/siddhant/JSProjects/learningJest/with-puppeteer-typescript/test.html", { waitUntil: 'domcontentloaded' });
+beforeAll(async () => {
+  await page.goto("http://localhost:3030/test.html", { waitUntil: 'domcontentloaded' });
 });
 
 describe('Test header and title of the page', () => {
@@ -11,10 +11,10 @@ describe('Test header and title of the page', () => {
 
 describe('Test Document', () => {
   beforeAll(async () => {
-    await page.goto('file:///home/siddhant/JSProjects/learningJest/with-puppeteer-typescript/test.html');
+    await page.goto('http://localhost:3030/test.html');
   });
 
-  it('should be titled "Google"', async () => {
+  it('should be titled "Test Document"', async () => {
     await expect(page.title()).resolves.toMatch('Test Document');
   });
-}); */
+});
